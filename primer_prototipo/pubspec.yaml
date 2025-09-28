@@ -1,0 +1,33 @@
+name: primer_prototipo
+description: "A new Flutter project."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  image_picker: ^1.0.7
+  permission_handler: ^11.3.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.14.4
+
+flutter:
+  uses-material-design: true
+  assets:
+    - android/assets/images/Logo.jpg
+    # Recomendación: evita usar .ico como asset en Flutter (convierte a .png si lo necesitas)
+    # - android/assets/images/Icon.ico
+
+# Configuración del generador de íconos
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "android/assets/images/Logo.jpg"
