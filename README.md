@@ -34,6 +34,7 @@ Cinta superior:
   2. Exploración (explore_screen.dart)
 
 Menú lateral:
+
   1.Historial de diagnósticos (diagnosis_history_screen.dart)
   2. Recomendaciones (recommendations_screen.dart)
   3. Reportes (reports_screen.dart)
