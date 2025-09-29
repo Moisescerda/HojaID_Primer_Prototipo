@@ -43,5 +43,4 @@ Menú lateral:
   7. Cerrar sesión (acción hacia login_screen.dart)
 
 Acceso rápido (AppBar):
-
 Perfil (profile_screen.dart)
