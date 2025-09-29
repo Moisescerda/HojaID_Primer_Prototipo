@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-// Importar pantallas
+// Pantallas base
 import 'screens/splash_screen.dart';
 import 'screens/onboarding_screen.dart';
 import 'screens/auth/login_screen.dart';
@@ -16,15 +16,22 @@ import 'screens/schedule/schedule_screen.dart';
 import 'screens/notifications/notifications_screen.dart';
 import 'screens/explore/explore_screen.dart';
 import 'screens/consult/consult_screen.dart';
+
+// Menú lateral extra (si ya las tienes)
 import 'screens/history/diagnosis_history_screen.dart';
 import 'screens/reports/reports_screen.dart';
 import 'screens/about/about_license_screen.dart';
 import 'screens/privacy/privacy_screen.dart';
 import 'screens/help/help_center_screen.dart';
 
+// ☆ NUEVAS de Exploración
+import 'screens/explore/crops_screen.dart';
+import 'screens/explore/treatments_screen.dart';
+import 'screens/explore/weather_screen.dart';
+import 'screens/explore/map_plots_screen.dart';
 
 class Routes {
-  // Constantes de rutas
+  // Rutas existentes
   static const String splash = '/';
   static const String onboarding = '/onboarding';
   static const String login = '/login';
@@ -40,14 +47,20 @@ class Routes {
   static const String notifications = '/notifications';
   static const String explore = '/explore';
   static const String consult = '/consult';
+
+  // Menú lateral extra (si ya las tienes)
   static const String diagnosisHistory = '/diagnosis-history';
   static const String reports = '/reports';
   static const String aboutLicense = '/about-license';
   static const String privacy = '/privacy';
   static const String helpCenter = '/help-center';
 
+  // ☆ NUEVAS (Exploración)
+  static const String crops = '/crops';
+  static const String treatments = '/treatments';
+  static const String weather = '/weather';
+  static const String mapPlots = '/map-plots';
 
-  // Mapa de rutas
   static Map<String, WidgetBuilder> getRoutes() {
     return {
       splash: (ctx) => const SplashScreen(),
@@ -65,11 +78,19 @@ class Routes {
       notifications: (ctx) => const NotificationsScreen(),
       explore: (ctx) => const ExploreScreen(),
       consult: (ctx) => const ConsultScreen(),
+
+      // Menú lateral extra
+      diagnosisHistory: (ctx) => const DiagnosisHistoryScreen(),
       reports: (ctx) => const ReportsScreen(),
       aboutLicense: (ctx) => const AboutLicenseScreen(),
       privacy: (ctx) => const PrivacyScreen(),
       helpCenter: (ctx) => const HelpCenterScreen(),
-      diagnosisHistory: (ctx) => const DiagnosisHistoryScreen(),
+
+      // ☆ NUEVAS (Exploración)
+      crops: (ctx) => const CropsScreen(),
+      treatments: (ctx) => const TreatmentsScreen(),
+      weather: (ctx) => const WeatherScreen(),
+      mapPlots: (ctx) => const MapPlotsScreen(),
     };
   }
 }

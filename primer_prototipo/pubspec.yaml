@@ -5,6 +5,8 @@ version: 1.0.0+1
 
 environment:
   sdk: ^3.9.0
+  # Si te diera error de compatibilidad al hacer pub get,
+  # prueba con: ">=3.0.0 <4.0.0"
 
 dependencies:
   flutter:
@@ -12,6 +14,8 @@ dependencies:
   cupertino_icons: ^1.0.8
   image_picker: ^1.0.7
   permission_handler: ^11.3.1
+  geolocator: ^14.0.2
+  table_calendar: ^3.0.9
 
 dev_dependencies:
   flutter_test:
@@ -23,8 +27,6 @@ flutter:
   uses-material-design: true
   assets:
     - android/assets/images/Logo.jpg
-    # Recomendación: evita usar .ico como asset en Flutter (convierte a .png si lo necesitas)
-    # - android/assets/images/Icon.ico
 
 # Configuración del generador de íconos
 flutter_launcher_icons:

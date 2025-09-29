@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../Routes.dart';
 
 class ExploreScreen extends StatelessWidget {
   const ExploreScreen({super.key});
@@ -47,7 +48,20 @@ class ExploreScreen extends StatelessWidget {
                   title: it.title,
                   subtitle: it.subtitle,
                   onTap: () {
-                    // TODO: Navigator.pushNamed(context, Routes.xxx);
+                    switch (it.title) {
+                      case "Cultivos":
+                        Navigator.pushNamed(context, Routes.crops);
+                        break;
+                      case "Tratamientos":
+                        Navigator.pushNamed(context, Routes.treatments);
+                        break;
+                      case "Clima":
+                        Navigator.pushNamed(context, Routes.weather);
+                        break;
+                      case "Mapa":
+                        Navigator.pushNamed(context, Routes.mapPlots);
+                        break;
+                    }
                   },
                 );
               },
@@ -88,7 +102,7 @@ class _ExploreCard extends StatelessWidget {
     final titleStyle = Theme.of(context)
         .textTheme
         .titleMedium
-        ?.copyWith(fontWeight: FontWeight.w800); // un poco más pequeño
+        ?.copyWith(fontWeight: FontWeight.w800);
     final subStyle = Theme.of(context)
         .textTheme
         .bodySmall
