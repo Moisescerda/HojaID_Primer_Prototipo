@@ -38,13 +38,21 @@ class _DashboardScreenState extends State<DashboardScreen> {
           ),
         ),
         centerTitle: true,
-        title: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: const [
-            Icon(Icons.eco, size: 22),
-            SizedBox(width: 6),
-            Text('HojaID', style: TextStyle(fontWeight: FontWeight.w800)),
-          ],
+        // ▼ Logo centrado en el AppBar (sin texto “HojaID”)
+        title: SizedBox(
+          height: kToolbarHeight * 0.80, // altura segura dentro del AppBar
+          child: Image.asset(
+            'android/assets/images/LOGO_HOJA_ID_HOME.png',
+            fit: BoxFit.contain,
+            errorBuilder: (_, __, ___) => Row(
+              mainAxisSize: MainAxisSize.min,
+              children: const [
+                Icon(Icons.eco, size: 22),
+                SizedBox(width: 6),
+                Text('HojaID', style: TextStyle(fontWeight: FontWeight.w800)),
+              ],
+            ),
+          ),
         ),
         actions: [
           IconButton(

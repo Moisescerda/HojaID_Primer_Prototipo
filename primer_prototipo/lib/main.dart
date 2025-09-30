@@ -127,7 +127,7 @@ ThemeData _darkTheme(Color seed) {
   return ThemeData(
     useMaterial3: true,
     brightness: Brightness.dark,
-    colorScheme: cs,
+    colorScheme: cs, 
 
     scaffoldBackgroundColor: const Color(0xFF0E0F10),
 
